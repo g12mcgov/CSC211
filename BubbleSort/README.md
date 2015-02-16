@@ -1,8 +1,5 @@
 # BubbleSort
 
-Overview
-======
-
 A simple bubble-sort routine written in Assembly designed for the Altera NIOS II processor.
 
 The origin `C` implementation of this routine is found below:
