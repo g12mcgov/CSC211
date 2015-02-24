@@ -13,3 +13,13 @@ The original `C` implementation of this routine is found below:
 	}
 ```
 
+
+It also makes use of the built in LED display and uses bit-to-hex conversion to display my name. Though not perfect, it's the best we can do with the standard "block text display".
+	
+	____
+	|__|
+	|__|
+
+
+![demo](http://i1158.photobucket.com/albums/p618/g12mcgov/nios.png)
+
