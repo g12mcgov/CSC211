@@ -2,7 +2,7 @@
 
 A simple bubble-sort routine written in Assembly designed for the Altera NIOS II processor.
 
-The origin `C` implementation of this routine is found below:
+The original `C` implementation of this routine is found below:
 
 ```C
 	void bsort(int X[], int N) {

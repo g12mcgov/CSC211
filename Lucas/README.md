@@ -2,7 +2,7 @@
 
 An Assembly implementation of the Lucas method designed for the Altera NIOS II processor.
 
-The origin `C` implementation of this routine is found below:
+The original `C` implementation of this routine is found below:
 
 ```C
 	int Lucas(int N) {
