@@ -1,4 +1,4 @@
-# BubbleSort
+# Lucas
 
 An Assembly implementation of the Lucas method designed for the Altera NIOS II processor.
 
