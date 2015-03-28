@@ -1,0 +1,15 @@
+In this lab you will implement a NIOS II function that given a non-negative floating point number, will return an approximation for that numbers square root.  The algorithm you will implement to compute the square root is known as the Babylonian Algorithm (in honor of the algorithm's origin).  As well you need to create a main program that will call your square root function.  Your main program should, of course, display your logo.  However, there is no painless way to read in a floating point number, so go ahead and store the testing floating point number as a constant.
+ 
+In the sakai resources there is a c++ program that implements the Babylonian algorithm.  We will talk about in class what floating point instructions are available and how we will need to work around those that are not available.
+ 
+You will also need to create some simple macros.  For example, a simple macro that will allow easy use of fmuls is:
+ 
+.macro fmuls rga,rgb,rgc
+​            custom 252,\rga,\rgb,\rgc
+​.endm
+ 
+You will need to create macros for each of the few floating point instructions we have available to us on the NIOS II processor.  In class I will talk about how these macros can be easily included into your programs.  These are similar to the #define macro definition operator in c/c++.
+ 
+You will also need to upgrade the processor on the NIOS II machine from the NIOS II Basic to the NIOS II Media.  The NIOS II Media processor has limited floating point support, integer multiplication and division, and other options as well.  On the NIOS II Media computer there are four IEEE single precision floating point instructions implemented fdivs (255), fadds (253), fmuls (252) and fsubs (254); this does comply to IEEE 784-1985.  Each of these are implemented as custom instructions, and each is an R instruction.  
+ 
+The most exciting part of this program is determining when to stop.  Essentially, we want the algorithm to quit when the relative error between two successive iterates are within some a priori small distance of each other.  What would be helpful would be for the NIOS II computer to be fully compliant with the IEEE single precision standard, but of course NOT (but 1985 was a good year).  In particular, we are missing the float point comparison.  In class we will develop the steps required to get this done.  Luckily we can do this efficiently at the assembly level (what a surprise).
